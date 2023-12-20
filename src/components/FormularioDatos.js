@@ -1,18 +1,21 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { format } from "date-fns";
 export const FormularioDatos = () => {
-    const [fechaAniversario, setFechaAniversario] = useState(new Date());
+  const [fechaAniversario, setFechaAniversario] = useState(new Date());
   const [primerNombre, setPrimerNombre] = useState("");
   const [mensaje, setMensaje] = useState("");
 
   const handleSubmit = () => {
+
+    const fechaFormateada = format(fechaAniversario, "dd/MM/yyyy");
+
     if (
-      fechaAniversario.getDate() === 2 &&
-      fechaAniversario.getMonth() === 11 &&
-      fechaAniversario.getFullYear() === 2023 &&
+      fechaFormateada === "02/11/2023" &&
       primerNombre.toLowerCase() === "madai"
     ) {
+      console.log(fechaFormateada);
       setMensaje("¡Correcto!");
     } else {
       setMensaje("¡Incorrecto! Por favor, verifica los datos ingresados.");
@@ -62,7 +65,9 @@ export const FormularioDatos = () => {
               Probar
             </button>
           </div>
-          {mensaje && <p className="mt-4 text-center text-green-500">{mensaje}</p>}
+          {mensaje && (
+            <p className="mt-4 text-center text-green-500">{mensaje}</p>
+          )}
         </form>
       </div>
     </div>
