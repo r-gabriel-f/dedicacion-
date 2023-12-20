@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { format } from "date-fns";
-import Swal from "sweetalert2";
+
 export const FormularioDatos = () => {
   const [fechaAniversario, setFechaAniversario] = useState(new Date());
   const [primerNombre, setPrimerNombre] = useState("");
@@ -16,10 +16,9 @@ export const FormularioDatos = () => {
       fechaFormateada === "02/11/2023" &&
       primerNombre.toLowerCase() === "madai"
     ) {
-      console.log(fechaFormateada);
-      setMensaje("¡Correcto!");
+      setMensaje("♥Madai Alejandra Monrroy Vega♥ Eres el amor de mi vida te quiero mucho se que esoy medio raro aveces pero es para que no te vea triste o preocupada siempre te sacare una sonrisa en cualquier momento que estemos estoy muy feliz de poder en contrarte en mi camino te amo mucho mi reyna y siempre estare para ti en lo que sea mi amorshito mi bebecita brrrr ♥");
     } else {
-      setMensaje("¡Incorrecto! Por favor, verifica los datos ingresados.");
+      setMensaje("Quien sera el otro no jajajaaj");
     }
   };
 
