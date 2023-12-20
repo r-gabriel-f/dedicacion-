@@ -9,14 +9,15 @@ export const FormularioDatos = () => {
   const [mensaje, setMensaje] = useState("");
 
   const handleSubmit = () => {
-
     const fechaFormateada = format(fechaAniversario, "dd/MM/yyyy");
 
     if (
       fechaFormateada === "02/11/2023" &&
       primerNombre.toLowerCase() === "madai"
     ) {
-      setMensaje("♥Madai Alejandra Monrroy Vega♥ Eres el amor de mi vida te quiero mucho se que esoy medio raro aveces pero es para que no te vea triste o preocupada siempre te sacare una sonrisa en cualquier momento que estemos estoy muy feliz de poder en contrarte en mi camino te amo mucho mi reyna y siempre estare para ti en lo que sea mi amorshito mi bebecita brrrr ♥");
+      setMensaje(
+        "♥Madai Alejandra Monrroy Vega♥ Eres el amor de mi vida te quiero mucho se que esoy medio raro aveces pero es para que no te vea triste o preocupada siempre te sacare una sonrisa en cualquier momento que estemos estoy muy feliz de poder en contrarte en mi camino te amo mucho mi reyna y siempre estare para ti en lo que sea mi amorshito mi bebecita brrrr ♥"
+      );
     } else {
       setMensaje("Quien sera el otro no jajajaaj");
     }
@@ -66,7 +67,9 @@ export const FormularioDatos = () => {
             </button>
           </div>
           {mensaje && (
-            <p className="mt-4 text-center text-green-500">{mensaje}</p>
+            <div>
+              <p className="mt-4 text-center text-green-500">{mensaje}</p>
+            </div>
           )}
         </form>
       </div>
