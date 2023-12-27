@@ -25,31 +25,31 @@ export const FormularioDatos = () => {
 
   return (
     <div className="flex items-center justify-center h-screen">
-      <div className="w-full max-w-xs">
-        <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <div>
+        <form className="px-8 pt-6 pb-8 mb-4">
           <div className="mb-4">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+            <h1
+              className="text-4xl font-bold mb-5"
               htmlFor="fechaAniversario"
             >
               Fecha de aniversario
-            </label>
+            </h1>
             <DatePicker
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="py-2 px-3 text-gray-700 "
               id="fechaAniversario"
               selected={fechaAniversario}
               onChange={(date) => setFechaAniversario(date)}
             />
           </div>
           <div className="mb-4">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+            <h1
+              className="text-4xl font-bold mb-5"
               htmlFor="primerNombre"
             >
               Primer nombre de mi amorshito
-            </label>
+            </h1>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="border rounded w-full py-2 px-3 text-gray-700"
               id="primerNombre"
               type="text"
               placeholder="Primer Nombre"
@@ -59,11 +59,11 @@ export const FormularioDatos = () => {
           </div>
           <div className="flex items-center justify-between">
             <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
               type="button"
               onClick={handleSubmit}
             >
-              Probar
+              Ingresar
             </button>
           </div>
           {mensaje && (

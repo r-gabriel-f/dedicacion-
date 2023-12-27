@@ -3,7 +3,7 @@ import { FormularioDatos } from "./components/FormularioDatos";
 
 function App() {
   return (
-    <div className="h-screen bg-[#d49ff0]">
+    <div className="h-screen bg-gradient-to-b from-purple-500 via-pink-500 to-red-500">
       <div className="bg-baner">
       <FormularioDatos/>
 
