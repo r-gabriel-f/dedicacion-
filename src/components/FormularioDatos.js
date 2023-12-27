@@ -29,13 +29,13 @@ export const FormularioDatos = () => {
         <form className="px-8 pt-6 pb-8 mb-4">
           <div className="mb-4">
             <h1
-              className="text-4xl font-bold mb-5"
+              className="text-4xl font-letra mb-5"
               htmlFor="fechaAniversario"
             >
               Fecha de aniversario
             </h1>
             <DatePicker
-              className="py-2 px-3 text-gray-700 "
+              className="py-2 px-3 text-gray-700 border-2 rounded  border-black"
               id="fechaAniversario"
               selected={fechaAniversario}
               onChange={(date) => setFechaAniversario(date)}
@@ -43,13 +43,13 @@ export const FormularioDatos = () => {
           </div>
           <div className="mb-4">
             <h1
-              className="text-4xl font-bold mb-5"
+              className="text-4xl font-letra mb-5"
               htmlFor="primerNombre"
             >
               Primer nombre de mi amorshito
             </h1>
             <input
-              className="border rounded w-full py-2 px-3 text-gray-700"
+              className="border-2 rounded  border-black w-full py-2 px-3  "
               id="primerNombre"
               type="text"
               placeholder="Primer Nombre"
@@ -59,7 +59,7 @@ export const FormularioDatos = () => {
           </div>
           <div className="flex items-center justify-between">
             <button
-              className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border-2 rounded  border-black"
               type="button"
               onClick={handleSubmit}
             >

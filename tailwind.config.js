@@ -3,6 +3,9 @@ module.exports = {
   content: [ "./src/**/*.{js,jsx,ts,tsx}",],
   theme: {
     extend: {
+      fontFamily: {
+        letra: ['Shadows Into Light', 'cursive'],
+      },
       colors: {
         'primary-color': '#ffff',
       },
