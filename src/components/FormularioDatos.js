@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { format } from "date-fns";
+import Swal from "sweetalert2";
 
 export const FormularioDatos = () => {
   const [fechaAniversario, setFechaAniversario] = useState(new Date());
   const [primerNombre, setPrimerNombre] = useState("");
-  const [mensaje, setMensaje] = useState("");
 
   const handleSubmit = () => {
     const fechaFormateada = format(fechaAniversario, "dd/MM/yyyy");
@@ -15,11 +15,20 @@ export const FormularioDatos = () => {
       fechaFormateada === "02/11/2023" &&
       primerNombre.toLowerCase() === "madai"
     ) {
-      setMensaje(
-        "♥Madai Alejandra Monrroy Vega♥ Eres el amor de mi vida te quiero mucho se que esoy medio raro aveces pero es para que no te vea triste o preocupada siempre te sacare una sonrisa en cualquier momento que estemos estoy muy feliz de poder en contrarte en mi camino te amo mucho mi reyna y siempre estare para ti en lo que sea mi amorshito mi bebecita brrrr ♥"
-      );
+      Swal.fire({
+        title: "TE AMO :)",
+        text: "♥Madai Alejandra Monrroy Vega♥ Eres el amor de mi vida te quiero mucho se que esoy medio raro aveces pero es para que no te vea triste o preocupada siempre te sacare una sonrisa en cualquier momento que estemos estoy muy feliz de poder en contrarte en mi camino te amo mucho mi reyna y siempre estare para ti en lo que sea mi amorshito mi bebecita brrrr ♥",
+        imageUrl: "https://unsplash.it/400/200",
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: "Custom image",
+      });
     } else {
-      setMensaje("Quien sera el otro no jajajaaj");
+      Swal.fire({
+        title: "LO OLVIDASTE :(",
+        text: "Quien sera el otro no jajajaaj",
+        icon: "error",
+      });
     }
   };
 
@@ -28,10 +37,7 @@ export const FormularioDatos = () => {
       <div>
         <form className="px-8 pt-6 pb-8 mb-4">
           <div className="mb-4">
-            <h1
-              className="text-4xl font-letra mb-5"
-              htmlFor="fechaAniversario"
-            >
+            <h1 className="text-4xl font-letra mb-5" htmlFor="fechaAniversario">
               Fecha de aniversario
             </h1>
             <DatePicker
@@ -42,10 +48,7 @@ export const FormularioDatos = () => {
             />
           </div>
           <div className="mb-4">
-            <h1
-              className="text-4xl font-letra mb-5"
-              htmlFor="primerNombre"
-            >
+            <h1 className="text-4xl font-letra mb-5" htmlFor="primerNombre">
               Primer nombre de mi amorshito
             </h1>
             <input
@@ -66,11 +69,6 @@ export const FormularioDatos = () => {
               Ingresar
             </button>
           </div>
-          {mensaje && (
-            <div>
-              <p className="mt-4 text-center text-green-500">{mensaje}</p>
-            </div>
-          )}
         </form>
       </div>
     </div>
