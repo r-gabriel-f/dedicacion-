@@ -11,14 +11,15 @@ export const FormularioDatos = () => {
   const [fechaAniversario, setFechaAniversario] = useState(new Date());
   const [primerNombre, setPrimerNombre] = useState("");
   const handleSubmit = () => {
-      const v = creo;
-      const fechaFormateada = format(fechaAniversario, "dd/MM/yyyy");
+    const v = creo;
+    const fechaFormateada = format(fechaAniversario, "dd/MM/yyyy");
     if (
       fechaFormateada === "02/11/2023" &&
       primerNombre.toLowerCase() === "madai"
     ) {
       const audio = new Audio(v);
       audio.play();
+
       Swal.fire({
         title: "TE AMO :)",
         html: `
@@ -36,20 +37,21 @@ export const FormularioDatos = () => {
           <p>Robert Gabriel Flores bebecita brrrrrr♥</p>
         </div>
       `,
-
         imageUrl: yo,
         imageWidth: 300,
         imageHeight: 200,
         imageAlt: "Custom image",
+        confirmButtonColor: "#3085d6",
         confirmButtonText: "Mi Reyna",
-        onClose: () => {
+      }).then((result) => {
+        if (result.isConfirmed) {
           audio.pause();
           audio.currentTime = 0;
-        },
+        }
       });
     } else {
-      const audio = new Audio(er);
-      audio.play();
+      const audioerror = new Audio(er);
+      audioerror.play();
       Swal.fire({
         title: "LO OLVIDASTE :(",
         text: "Quien sera el otro noooooo jajajaaj :v",
@@ -57,7 +59,13 @@ export const FormularioDatos = () => {
         imageWidth: 300,
         imageHeight: 300,
         imageAlt: "Custom image",
-        cancelButtonText: "Recuerdate",
+        confirmButtonColor: "#d33",
+        confirmButtonText: "Recuerdate!",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          audioerror.pause();
+          audioerror.currentTime = 0;
+        }
       });
     }
   };
