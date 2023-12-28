@@ -15,7 +15,7 @@ export const FormularioDatos = () => {
     const fechaFormateada = format(fechaAniversario, "dd/MM/yyyy");
     if (
       fechaFormateada === "02/11/2023" &&
-      primerNombre.toLowerCase() === "madai"
+      primerNombre.toLowerCase() === ("madai" || "Madai" || "MADAI")
     ) {
       const audio = new Audio(v);
       audio.play();
