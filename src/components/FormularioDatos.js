@@ -5,8 +5,8 @@ import { format } from "date-fns";
 import Swal from "sweetalert2";
 import yo from "../assets/imagene/yo.webp";
 import error from "../assets/imagene/error.webp";
-import creo from "../assets/musicas/creo.weba";
-import er from "../assets/musicas/error.weba";
+import creo from "../assets/musicas/creo.mp3";
+import er from "../assets/musicas/error.mp3";
 export const FormularioDatos = () => {
   const [fechaAniversario, setFechaAniversario] = useState(new Date());
   const [primerNombre, setPrimerNombre] = useState("");
