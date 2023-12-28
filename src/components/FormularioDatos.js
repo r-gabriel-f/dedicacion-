@@ -18,7 +18,7 @@ export const FormularioDatos = () => {
     ) {
       Swal.fire({
         title: "TE AMO :)",
-        text: "♥Madai Alejandra Monrroy Vega♥ Eres el amor de mi vida te quiero mucho se que esoy medio raro aveces pero es para que no te vea triste o preocupada siempre te sacare una sonrisa en cualquier momento que estemos estoy muy feliz de poder en contrarte en mi camino te amo mucho mi reyna y siempre estare para ti en lo que sea mi amorshito mi bebecita brrrr ♥",
+        text: "♥Querida Madai Alejandra Monrroy Vega, En el jardín de mi corazón, florece una flor única y hermosa: tú. Cada día a tu lado es un regalo que atesoro con gratitud y amor. Tu luz ilumina mi vida de maneras que nunca imaginé, y cada momento contigo es un recordatorio de la suerte que tengo de tenerte a mi lado.        Eres la melodía que alegra mis días y la calma que serena mis noches. Tu sonrisa es mi faro en los días nublados, y tus abrazos son el refugio donde encuentro paz y felicidad. Cada pequeño detalle de ti me enamora un poco más, y estoy agradecido por cada instante que compartimos juntos.  Prometo amarte con todo mi ser, con paciencia en los desafíos y alegría en los triunfos. Eres mi inspiración, mi confidente y mi mejor amiga. En este viaje llamado vida, estoy agradecido de tenerte como mi compañera de ruta. Gracias por ser mi razón de sonreír, por llenar mi mundo de amor y por ser la razón por la cual mi corazón late con tanta fuerza. Te amo más de lo que las palabras pueden expresar, y mi deseo más profundo es hacerte feliz todos los días.  Con todo mi amor,   Robert Gabriel Flores bebecita brrrrrr♥",
         imageUrl: yo,
         imageWidth: 300,
         imageHeight: 200,
@@ -28,7 +28,7 @@ export const FormularioDatos = () => {
     } else {
       Swal.fire({
         title: "LO OLVIDASTE :(",
-        text: "Quien sera el otro noooooo jajajaaj",
+        text: "Quien sera el otro noooooo jajajaaj :v",
         imageUrl: error,
         imageWidth: 300,
         imageHeight: 300,
